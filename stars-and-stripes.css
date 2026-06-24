@@ -1,5 +1,12 @@
 /* Stars & Stripes Canvas | stars-and-stripes.css */
 
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('fonts/BebasNeue-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
 :root {
   --patriot-blue: #002868;
   --liberty-red:  #BF0A30;
@@ -45,9 +52,10 @@ main:has(#page-united:target) #cover { display: none; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--patriot-blue);
-  border-bottom: 3px solid var(--liberty-red);
-  padding: 0.75rem 2rem;
+  background: #1a1a1a;
+  padding: 15px;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
 }
 
 .header-inner {
@@ -62,8 +70,8 @@ main:has(#page-united:target) #cover { display: none; }
 
 .logo {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.3rem;
-  color: var(--star-gold);
+  font-size: 1.8rem;
+  color: #ffffff;
 }
 
 nav { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -161,33 +169,45 @@ nav { display: flex; gap: 1rem; flex-wrap: wrap; }
 /* --- Buttons --- */
 .btn {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   text-decoration: none;
-  padding: 0.6rem 1.8rem;
-  border-radius: 50px;
-  border: 2px solid var(--star-gold);
-  transition: transform 0.2s;
+  width: 380px;
+  max-width: 100%;
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  padding: 15px 0;
+  background-color: #ffffff;
+  color: #111111;
+  border: 3px solid #111111;
   cursor: pointer;
+  outline: none;
+  transition: all 0.1s ease;
+  /* Shadow on bottom and left side */
+  box-shadow: -6px 6px 0px 0px #111111;
+  border-radius: 0;
 }
 
-.btn:focus { outline: 3px solid var(--star-gold); outline-offset: 3px; }
+.btn:focus { outline: none; }
+
+.btn:hover {
+  transform: translate(-2px, 2px);
+  box-shadow: -4px 4px 0px 0px #111111;
+  animation: none;
+}
+
+.btn:active {
+  transform: translate(-6px, 6px);
+  box-shadow: 0px 0px 0px 0px #111111;
+}
 
 .btn-primary {
-  background: var(--liberty-red);
-  color: var(--star-gold);
-  font-size: 1.2rem;
-  padding: 0.8rem 2.5rem;
-  animation: pulse 2.5s ease-in-out infinite;
+  background: #ffcda2;
 }
 
-.btn-primary:hover { transform: scale(1.06); animation: none; }
-
-.btn-nav { background: var(--patriot-blue); color: var(--parchment); }
-.btn-nav:hover { transform: scale(1.03); }
+.btn-nav {
+  background: #ffffff;
+}
 
 /* --- Heroes --- */
 .hero {
@@ -345,21 +365,32 @@ nav { display: flex; gap: 1rem; flex-wrap: wrap; }
 /* --- Fireworks (:checked interaction) --- */
 .firework-btn {
   display: block;
-  width: fit-content;
+  width: 380px;
+  max-width: 100%;
   margin: 0 auto 1.5rem;
-  padding: 0.8rem 2.5rem;
-  background: var(--liberty-red);
-  border: 3px solid var(--star-gold);
-  border-radius: 50px;
+  padding: 15px 0;
+  text-align: center;
+  background: #ffcda2;
+  border: 3px solid #111111;
+  border-radius: 0;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  color: var(--star-gold);
-  letter-spacing: 0.1em;
+  font-size: 2.5rem;
+  color: #111111;
+  letter-spacing: 2px;
   cursor: pointer;
-  transition: transform 0.2s;
+  box-shadow: -6px 6px 0px 0px #111111;
+  transition: all 0.1s ease;
 }
 
-.firework-btn:hover { transform: scale(1.05); }
+.firework-btn:hover {
+  transform: translate(-2px, 2px);
+  box-shadow: -4px 4px 0px 0px #111111;
+}
+
+.firework-btn:active {
+  transform: translate(-6px, 6px);
+  box-shadow: 0px 0px 0px 0px #111111;
+}
 
 .fireworks-area {
   position: relative;
@@ -450,22 +481,17 @@ nav { display: flex; gap: 1rem; flex-wrap: wrap; }
 
 /* --- Footer --- */
 .site-footer {
-  background: var(--cannon-smoke);
-  border-top: 4px solid var(--liberty-red);
+  background: #1a1a1a;
+  color: #ffffff;
   text-align: center;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  padding: 15px;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
 }
 
-.site-footer p:first-child {
+.site-footer p {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  color: var(--star-gold);
 }
-
-.footer-names { font-size: 0.8rem; opacity: 0.5; }
 
 /* --- Keyframes --- */
 @keyframes twinkle {
