@@ -11,9 +11,7 @@
 </head>
 <body>
 
-  <!-- checkboxes for CSS-only interactivity -->
-  <input type="checkbox" id="flag-toggle" class="hidden-check" />
-  <input type="checkbox" id="firework-toggle" class="hidden-check" />
+  <input type="checkbox" id="firework-toggle" style="position:absolute;opacity:0;width:0;height:0;" />
 
   <!-- sticky header -->
   <header class="site-header">
@@ -72,21 +70,6 @@
             <h4>Stars &amp; Stripes</h4>
             <p>50 stars for all our states, and 13 stripes for the original colonies that started it all.</p>
           </article>
-        </div>
-      </div>
-
-      <!-- interactive flag section -->
-      <div class="content-section">
-        <h3 class="section-title">Wave the Flag!</h3>
-        <p class="section-hint">Click the flag to make it wave 🇺🇸</p>
-        <div class="flag-section">
-          <label for="flag-toggle" class="flag-label">
-            <div class="flag-pole"></div>
-            <div class="american-flag">
-              <img src="static_flag.png" alt="US Flag" class="flag-img static" />
-              <img src="flag.gif" alt="Waving US Flag" class="flag-img waving" />
-            </div>
-          </label>
         </div>
       </div>
 
