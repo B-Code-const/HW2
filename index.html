@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stars & Stripes Canvas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="stars-and-stripes.css" />
+</head>
+<body>
+
+  <!-- checkboxes for CSS-only interactivity -->
+  <input type="checkbox" id="flag-toggle" class="hidden-check" />
+  <input type="checkbox" id="firework-toggle" class="hidden-check" />
+
+  <!-- sticky header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">★ Stars &amp; Stripes Canvas ★</div>
+      <nav>
+        <a href="#page-dawn" class="nav-link">Freedom's Dawn</a>
+        <a href="#page-plaza" class="nav-link">Patriot's Plaza</a>
+        <a href="#page-united" class="nav-link">United We Stand</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- COVER PAGE -->
+    <section id="cover" class="page cover-page">
+      <div class="stars-bg">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        <span class="star">★</span><span class="star">★</span>
+      </div>
+      <div class="cover-content">
+        <p class="cover-date">July 4th, 1776 — Forever Free</p>
+        <h1 class="cover-title">Stars &amp;<br>Stripes<br>Canvas</h1>
+        <p class="cover-sub">An Interactive 4th of July Storybook</p>
+        <div class="stripe-bar">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <a href="#page-dawn" class="btn btn-primary">Begin the Journey ★</a>
+      </div>
+    </section>
+
+    <!-- PAGE 1: FREEDOM'S DAWN -->
+    <section id="page-dawn" class="page dawn-page">
+      <div class="hero dawn-hero">
+        <p class="chapter-label">Chapter I</p>
+        <h2>Freedom's Dawn</h2>
+        <p class="hero-sub">Where liberty's light first broke upon the horizon.</p>
+      </div>
+
+      <div class="content-section">
+        <h3 class="section-title">The Birth of a Nation</h3>
+        <div class="cards-grid">
+          <article class="card" tabindex="0">
+            <div class="card-icon">📜</div>
+            <h4>The Declaration</h4>
+            <p>On July 4, 1776, the Continental Congress adopted the Declaration of Independence, proclaiming that all men are created equal.</p>
+          </article>
+          <article class="card" tabindex="0">
+            <div class="card-icon">🦅</div>
+            <h4>The Eagle Soars</h4>
+            <p>The bald eagle was chosen as the national emblem in 1782 — a symbol of strength, freedom, and longevity.</p>
+          </article>
+          <article class="card" tabindex="0">
+            <div class="card-icon">⭐</div>
+            <h4>50 Stars, 13 Stripes</h4>
+            <p>50 stars for each state in the union, and 13 stripes honoring the original colonies that dared to dream of independence.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- interactive flag section -->
+      <div class="content-section">
+        <h3 class="section-title">Wave the Flag!</h3>
+        <p class="section-hint">Click the flag to make it wave 🇺🇸</p>
+        <div class="flag-section">
+          <label for="flag-toggle" class="flag-label">
+            <div class="flag-pole"></div>
+            <div class="american-flag">
+              <div class="canton">
+                <div class="flag-stars">
+                  ★ ★ ★ ★ ★ ★<br>
+                  ★ ★ ★ ★ ★ ★<br>
+                  ★ ★ ★ ★ ★ ★<br>
+                  ★ ★ ★ ★ ★ ★<br>
+                  ★ ★ ★ ★ ★ ★
+                </div>
+              </div>
+              <div class="stripes">
+                <div class="stripe red"></div>
+                <div class="stripe white"></div>
+                <div class="stripe red"></div>
+                <div class="stripe white"></div>
+                <div class="stripe red"></div>
+                <div class="stripe white"></div>
+                <div class="stripe red"></div>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <nav class="page-nav">
+        <a href="#cover" class="btn btn-nav">← Cover</a>
+        <a href="#page-plaza" class="btn btn-nav">Patriot's Plaza →</a>
+      </nav>
+    </section>
+
+    <!-- PAGE 2: PATRIOT'S PLAZA -->
+    <section id="page-plaza" class="page plaza-page">
+      <div class="hero plaza-hero">
+        <p class="chapter-label">Chapter II</p>
+        <h2>Patriot's Plaza</h2>
+        <p class="hero-sub">Celebrate liberty with fireworks, festivities, and patriotic pride.</p>
+      </div>
+
+      <div class="content-section">
+        <h3 class="section-title">Launch the Fireworks!</h3>
+        <p class="section-hint">Click the button to light up the sky 🎆</p>
+        <label for="firework-toggle" class="firework-btn">🎆 LAUNCH! 🎆</label>
+        <div class="fireworks-area">
+          <div class="burst b1"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="burst b2"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="burst b3"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3 class="section-title">Plaza Festivities</h3>
+        <div class="cards-grid">
+          <article class="card" tabindex="0">
+            <div class="card-icon">🎇</div>
+            <h4>Sparkler Parade</h4>
+            <p>Light the night with dazzling sparkler trails blazing red, white &amp; blue across the evening sky.</p>
+            <div class="sparklers">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </article>
+          <article class="card" tabindex="0">
+            <div class="card-icon">🥁</div>
+            <h4>Drum &amp; Fife</h4>
+            <p>The stirring sound of fife and drum echoes through the plaza, calling all citizens to celebrate freedom.</p>
+          </article>
+          <article class="card" tabindex="0">
+            <div class="card-icon">🎊</div>
+            <h4>Confetti Rain</h4>
+            <p>A cascade of red, white &amp; blue confetti fills the air as the crowd cheers for independence.</p>
+          </article>
+          <article class="card" tabindex="0">
+            <div class="card-icon">🔔</div>
+            <h4>Liberty Bell</h4>
+            <p>Hover to ring it! Proclaim liberty throughout all the land and to all the inhabitants thereof.</p>
+          </article>
+        </div>
+      </div>
+
+      <nav class="page-nav">
+        <a href="#page-dawn" class="btn btn-nav">← Freedom's Dawn</a>
+        <a href="#page-united" class="btn btn-nav">United We Stand →</a>
+      </nav>
+    </section>
+
+    <!-- PAGE 3: UNITED WE STAND -->
+    <section id="page-united" class="page united-page">
+      <div class="hero united-hero">
+        <p class="chapter-label">Chapter III</p>
+        <h2>United We Stand</h2>
+        <p class="hero-sub">One nation, indivisible — with liberty and justice for all.</p>
+        <div class="eagle-emoji">🦅</div>
+      </div>
+
+      <div class="content-section">
+        <h3 class="section-title">Pillars of Freedom</h3>
+        <div class="cards-grid pillars">
+          <article class="card pillar" tabindex="0">
+            <div class="card-icon">🗽</div>
+            <h4>Liberty</h4>
+            <p>The torch of liberty lights the way for all who seek freedom's promise on these shores.</p>
+          </article>
+          <article class="card pillar" tabindex="0">
+            <div class="card-icon">⚖️</div>
+            <h4>Justice</h4>
+            <p>Equal justice under law — the cornerstone of the American promise that unites every citizen.</p>
+          </article>
+          <article class="card pillar" tabindex="0">
+            <div class="card-icon">🤝</div>
+            <h4>Unity</h4>
+            <p>E Pluribus Unum — Out of Many, One. From sea to shining sea, stronger together.</p>
+          </article>
+          <article class="card pillar" tabindex="0">
+            <div class="card-icon">💫</div>
+            <h4>Hope</h4>
+            <p>Every star on our flag is a beacon of hope for the present generation and those yet to come.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <blockquote class="pledge">
+          <p>"We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness."</p>
+          <cite>— Declaration of Independence, July 4, 1776</cite>
+        </blockquote>
+      </div>
+
+      <nav class="page-nav">
+        <a href="#page-plaza" class="btn btn-nav">← Patriot's Plaza</a>
+        <a href="#cover" class="btn btn-nav">Back to Cover →</a>
+      </nav>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>★ Land of the Free &amp; Home of the Brave ★</p>
+    <p>Stars &amp; Stripes Canvas — A 4th of July Storybook | Built with HTML5 &amp; CSS3</p>
+    <p class="footer-names">Yohan &amp; [Partner Name]</p>
+  </footer>
+
+</body>
+</html>
